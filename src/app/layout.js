@@ -8,14 +8,14 @@ const inter = Inter({ subsets: ["latin"] });
 
 
 export default async function RootLayout({ children }) {
-  const colorScheme={
-    primary:"#ECB176",
-    background:"#f9eada",
-    secondary:"#A67b5b",
-    ternary:"#6f4e37",
-    primary_text:"#fff",
-    secondary_text:"#000",
-  }
+  const colorScheme = {
+    primary: "#1e2e45",
+    background: "#e8e9e1",
+    secondary: "#9a9162",
+    ternary: "#6f4e37",
+    primary_text: "#fff",
+    secondary_text: "#000",
+  };
   const businessData = await getBusinessDetails("justicejunction");
   return (
     <html lang="en">
@@ -30,7 +30,7 @@ export default async function RootLayout({ children }) {
     }}>
         <Navbar data={businessData}/>
         {children}
-       <Footer/>
+       <Footer  data={businessData}/>
         </body>
     </html>
   );

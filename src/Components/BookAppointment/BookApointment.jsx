@@ -29,35 +29,35 @@ const BookApointment = ({color}) => {
         defaultValue={dayjs()}
         sx={{
           width: "100%",
-          backgroundColor: `${color.background}`,
+          backgroundColor: `${color.primary_text}`,
           
           border:`2px dotted ${color.secondary}`,
           '& .MuiButtonBase-root': {
-            color:`${color.text_secondary}`, // Text color for buttons
+            color:`${color.secondary_text}`, // Text color for buttons
           },
           '& .MuiPickersDay-root': {
-            color:`${color.text_secondary}`, // Text color for days
+            color:`${color.secondary_text}`, // Text color for days
           },
           '& .MuiTypography-root': {
-            color:`${color.text_secondary}`, // Text color for all typography (e.g., month, year)
+            color:`${color.secondary_text}`, // Text color for all typography (e.g., month, year)
           },
           '& .MuiPickersCalendarHeader-root': {
-            color:`${color.text_secondary}`, // Text color for calendar header
+            color:`${color.secondary_text}`, // Text color for calendar header
           },
           '& .MuiSvgIcon-root': {
-            color:`${color.text_secondary}`, // Color for icons (e.g., arrows)
+            color:`${color.secondary_text}`, // Color for icons (e.g., arrows)
           },
           '& .Mui-selected': {
-            backgroundColor: `${color.ternary} !important`, // Background color for selected date
-            color: `${color.text_primary}!important`, // Text color for selected date
+            backgroundColor: `${color.secondary_text} !important`, // Background color for selected date
+            color: `${color. primary_text}!important`, // Text color for selected date
           },
         }}
         slotProps={{
           day: {
             sx: {
               '&.Mui-selected': {
-                backgroundColor: `${color.ternary}`, // Background color for selected date
-                color: `${color.text_primary}`, // Text color for selected date
+                backgroundColor: `${color.secondary_text}`, // Background color for selected date
+                color: `${color. primary_text}`, // Text color for selected date
               },
               '&.Mui-selected:hover': {
                 backgroundColor: `${color.secondary}`, // Darker red on hover for selected date
@@ -67,7 +67,7 @@ const BookApointment = ({color}) => {
           actionBar: {
             sx: {
               '& .MuiButton-root': {
-                color: `${color.ternary}`,
+                color: `${color. primary_text}`,
                 fontWeight:"600" // Text color for Cancel and OK buttons
               },
             },

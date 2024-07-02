@@ -26,7 +26,7 @@ const Navbar = ({data}) => {
            {/* <Image  src="/Assets/logo.png" alt="" width={200} height={100} />  */}
           
         </div>
-        <div className={style.navbar_contents}>
+        <div className={`${isOpen ? style.navbar_content:style.navbar_contents}`}>
           <div className={`${style.navbar_list} ${isOpen ? style.toggled : ''}`}>
            <Link href='/'>  <p>Home</p></Link>
             <Link href="/About"><p>About</p></Link>
