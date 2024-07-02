@@ -11,6 +11,9 @@
   --color-text-primary: #fff;
   --color-text-secondary: #000;
 }
+* {
+  font-family: "DM Serif Display", serif;
+}
 body {
   background-color: var(--color-background);
 }

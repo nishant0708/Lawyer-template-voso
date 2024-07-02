@@ -60,9 +60,7 @@ const Services = ({ data }) => {
         <div className={style.servicesheading}>
           <h1>Services</h1>
         </div>
-        <div className={style.servicesdesc}>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-        </div>
+
         <div className={style.container}>
           {serviceData?.map((serviceData) => (
             <div key={serviceData?._id} className={style.card}>

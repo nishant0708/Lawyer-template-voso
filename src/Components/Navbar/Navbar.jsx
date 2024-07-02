@@ -19,7 +19,7 @@ const Navbar = ({ data }) => {
         </div>
         <div className={style.navbar_img}>
           <Image
-            src={`${BACKEND_URL}/${data.business_details?.business_profile_image}`}
+            src={`${BACKEND_URL}/${data?.business_details?.business_profile_image}`}
             alt=""
             width={200}
             height={100}
