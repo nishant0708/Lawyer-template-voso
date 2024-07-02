@@ -1044,7 +1044,7 @@ color: var(--color-primary);
 .gallery-section {
   padding: 80px;
   text-align: center;
-  background: var(--color-text-primary);
+  background: var(--color-background);
 }
 .gallery-section .container{
   max-width: 1300px;
