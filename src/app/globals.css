@@ -1,18 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
-   
-    --color-background:#e8e9e1 ;
-    --color-primary: #1e2e45;
-    --color-secondary:#9a9162;
-    --color-ternary:#6f4e37;
-    --color-text-primary:#fff;
-    --color-text-secondary:#000;     
-  }
-body{
-  font-family: "DM Serif Display", serif !important;
+  --color-background: #e8e9e1;
+  --color-primary: #1e2e45;
+  --color-secondary: #9a9162;
+  --color-ternary: #6f4e37;
+  --color-text-primary: #fff;
+  --color-text-secondary: #000;
+}
+body {
+  background-color: var(--color-background);
 }
