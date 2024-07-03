@@ -2,6 +2,8 @@
 
 import Image from 'next/image';
 import styles from '@/Components/Theme5.module.css';
+import StaticContent from '@/Components/StaticContent/StaticContent';
+import Aboutus from '@/Components/AboutUs/Aboutus';
 
 const Page = () => {
   const aboutContent = [
@@ -23,7 +25,7 @@ const Page = () => {
       {aboutContent.map((content, index) => (
         <section key={index} className={styles.aboutSection}>
           <div className={styles.aboutHeader}>
-            <h1>About {content.company}</h1>
+            <h1>About</h1>
             <div className={styles.imageContainer}>
               <Image
                 src="/Assets/bg1.jpeg" // Replace with the path to your dynamic image
@@ -32,13 +34,14 @@ const Page = () => {
                 objectFit="cover"
               />
             </div>
+            <div className={styles.about_overlay}></div>
           </div>
-          <div
-            className={styles.content}
-            dangerouslySetInnerHTML={{ __html: content.content }}
-          ></div>
+          <Aboutus/>
+            
         </section>
+       
       ))}
+       <StaticContent/>
     </div>
   );
 };

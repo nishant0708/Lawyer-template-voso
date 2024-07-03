@@ -11,12 +11,17 @@ const BookApointment = ({color}) => {
   return (
     <div className={style.BookApointment_main}>
     <div className={style.BookApointment}>
-      <p className={style.bookheading}>Book Appointment</p>
 
+      <div className={style.book_title}>
+      <p className={style.bookhead}>Book Appointment</p>
+      <div className={style.book_hr}>
+      <div></div>
+      </div>
+      </div>
       <div className={style.book_img_container}>
         <div className={style.bookimg_back}>
           <Image
-            src="/Assets/lawyer1.png"
+            src="/Assets/bookapp1.jpeg"
             width={500}
             height={500}
             alt=""

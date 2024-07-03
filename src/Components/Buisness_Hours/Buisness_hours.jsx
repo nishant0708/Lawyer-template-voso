@@ -1,7 +1,7 @@
 import React from "react";
 import style from "@/Components/Theme5.module.css";
 
-const Buisness_hours = () => {
+const Buisness_hours = ({data}) => {
     const openingHoursData = [
         { day: "Sun", open: "Closed", close: "Closed" },
         { day: "Mon", open: "10:00 AM", close: "5:00 PM" },
@@ -14,13 +14,14 @@ const Buisness_hours = () => {
 
     return (
        <div> <div className={style.buisnesshrs}>
-            <p className={style.Buisness_hours_title}>Business Hours</p>
+            <div className={style.Buisness_hours_title}>
+              <p>  Business Hours  </p>
+               <div className={style.buisness_hour_hr}>
+                <div></div>
+                </div>  
+                </div>
 
             <div className={style.buisness_main}>
-            
-            <div className={style.buisness_hour_img}>
-                <img src="/Assets/bookinghrs1.png" alt=""/>
-            </div>
             <div className={style.buisness_container}>
             {openingHoursData.map((hours, index) => (
                 <div key={index} className={style.buisness_box}>

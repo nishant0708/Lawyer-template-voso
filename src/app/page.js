@@ -1,3 +1,4 @@
+import Aboutus from '@/Components/AboutUs/Aboutus';
 import Banner from '@/Components/Banner/Banner'
 import BookApointment from '@/Components/BookAppointment/BookApointment';
 import Buisness_hours from '@/Components/Buisness_Hours/Buisness_hours';
@@ -23,10 +24,12 @@ const Page = async() => {
     <div>
       <Banner data={businessData} />
       <Services data={businessData}/>
+      <Aboutus data={businessData}/>
+      <Gallery data={businessData}/>
       <StaticContent/>
+      <Buisness_hours data={businessData}/>
       <BookApointment color={colorScheme}/>
-      <Gallery/>
-      <Buisness_hours/>
+  
       <Contact data={businessData}/>
     </div>
   )

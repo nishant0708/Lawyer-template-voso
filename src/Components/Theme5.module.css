@@ -287,7 +287,7 @@
   justify-content: center;
   text-align: center;
   align-items: center;
-  padding: 5em 0em;
+  padding: 9em 0em 0em 0em;
 }
 .services {
   max-width: 1300px;
@@ -444,8 +444,8 @@
   font-weight: 200;
 }
 .appointment-form__button {
-  background-color: #000;
-  color: #fff;
+  background-color: var(--color-primary);
+  color: var(--color-text-primary);
   padding: 0.75rem;
   border: none;
   border-radius: 5px;
@@ -454,7 +454,7 @@
 }
 
 .appointment-form__button:hover {
-  background-color: #333;
+  background-color: var(--color-secondary);
 }
 @media (max-width: 768px) {
   .appointment_namephone {
@@ -475,11 +475,27 @@
 .appointment-form__button {
   width: 200px;
 }
-.bookheading {
+.book_title {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 60px;
+  justify-content: center;
+}
+.bookhead {
   font-size: 48px;
+  color: var(--color-primary);
+  width: 82%;
   font-weight: 600;
   text-align: center;
-  margin-bottom: 50px;
+}
+.book_hr {
+  width: 60%;
+}
+.book_hr div {
+  height: 0px;
+  border: 1px solid var(--color-primary);
+  width: 80%;
 }
 .book_img_container {
   display: flex;
@@ -488,9 +504,13 @@
   gap: 0px;
 }
 .bookimg_back {
+  width: 40%;
   background-color: var(--color-text-secondary);
 }
-
+.bookimg_back .bookimage {
+  width: 100%;
+  max-height: 500px;
+}
 .calendar_container {
   width: 35%;
 }
@@ -505,7 +525,7 @@
   }
 }
 @media (max-width: 500px) {
-  .bookheading {
+  .bookhead {
     font-size: 36px;
   }
   .calendar_container {
@@ -519,15 +539,16 @@
 /* ------------------------bookinghrs--------------------*/
 
 .buisnesshrs {
-  padding: 5px 120px 20px 120px;
+  padding: 60px 120px 60px 120px;
+  min-height: 50vh;
+  background-color: var(--color-primary);
 }
 .buisnesshrs_icon {
-  width: max-content;
-  height: max-content;
-  padding: 10px 12px;
-  border-radius: 50%;
-  transition: ease-in-out 0.5s;
-  border: 2px dotted white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 100%;
 }
 .buisness_main {
   width: 100%;
@@ -538,26 +559,36 @@
   width: 50%;
 }
 .buisnesshrs_icon svg {
-  stroke: white;
+  stroke: rgb(0, 0, 0);
 }
-.buisnesshrs_icon:hover {
-  background-color: white;
-  border: 2px dotted #0db3b1;
-}
-.buisnesshrs_icon:hover svg {
-  color: #0db3b1;
-  stroke: #0db3b1;
-}
+
 .Buisness_hours_title {
   font-size: 48px;
   font-weight: 600;
   text-align: center;
+  display: flex;
+  align-items: center;
+  width: 100%;
   color: black;
   margin-bottom: 20px;
+}
+.Buisness_hours_title p {
+  width: 35%;
+  color: var(--color-background);
+}
+.buisness_hour_hr {
+  width: 100%;
+}
+.buisness_hour_hr div {
+  height: 0px;
+  border: 1px solid var(--color-background);
+  width: 100%;
 }
 .buisness_container {
   margin-top: 4rem;
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
 }
@@ -565,28 +596,16 @@
   display: flex;
   gap: 10px;
   width: 250px;
-  background: white;
-  height: max-content;
-  padding: 15px;
-  border: 2px dotted #0db3b1;
-  border-radius: 61px;
+  background: var(--color-background);
+  line-height: 16px;
+  align-items: center;
+  height: 60px;
+  padding: 11px;
   transition: all 0.3s ease-in-out;
   cursor: grab;
 }
 .buisness_box:hover {
-  background-color: #0db3b1;
-
-  border: 2px dotted white;
-}
-.buisness_box:hover .buisness_detail p {
-  color: white;
-}
-.buisness_box:hover .buisnesshrs_icon {
-  background-color: #ffffff;
-  border: 2px dotted #0db3b1;
-}
-.buisness_box:hover .buisnesshrs_icon svg {
-  stroke: #0db3b1;
+  background: white;
 }
 .buisness_box p {
   display: flex;
@@ -830,6 +849,7 @@
 /* Responsive Design */
 @media (max-width: 900px) {
   .footer_new_contents {
+    align-items: center;
     flex-direction: column;
     text-align: center; /* Center text on smaller screens */
   }
@@ -893,11 +913,23 @@
   color: var(--color-primary);
 }
 .static_button {
+  cursor: pointer;
   font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 40px;
+  color: var(--color-primary);
+  height: 50px;
   width: 200px;
   background-color: var(--color-secondary);
+  transition: 0.3s;
 }
+.static_button:hover {
+  background-color: var(--color-primary);
+  color: var(--color-text-primary);
+}
+
 /* --------------------GALLERY SECTTION----------------------- */
 .gallery-section {
   padding: 80px;
@@ -920,16 +952,17 @@
 
 .gallery-section__box {
   display: flex;
+  gap: 10px;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 .gallery-section__box-item {
   position: relative;
-  width: calc(33.333% - 20px); /* Three items per row with 20px gap */
+  width: calc(26.333% - 9px); /* Three items per row with 20px gap */
   margin: 5px;
   overflow: hidden;
-
+  gap: 40px;
   cursor: pointer;
 }
 
@@ -1032,12 +1065,18 @@
 }
 
 @media (max-width: 991px) {
+  .gallery-section__box {
+    gap: 0px;
+  }
   .gallery-section__box-item {
-    width: calc(50% - 10px); /* Two items per row */
+    width: calc(40% - 10px); /* Two items per row */
   }
 }
 
 @media (max-width: 767px) {
+  .gallery-section {
+    padding: 20px;
+  }
   .gallery-section__subtitle {
     font-size: 1.5em;
   }
@@ -1045,9 +1084,139 @@
     font-size: 2.5em;
   }
   .gallery-section__box-item {
-    width: calc(100% - 10px); /* One item per row */
+    width: calc(70% - 10px); /* One item per row */
   }
 }
+/* -------------------------About Us-Home --------------- */
+.aboutus {
+  position: relative;
+  width: 100%;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  align-items: center;
+ 
+}
+.aboutus_main {
+  max-width: 1300px;
+  margin: auto;
+}
+
+.aboutus .background_img {
+  width: 50%;
+
+  object-fit: cover;
+}
+.about_img {
+  width: 100%;
+  height: 100%;
+}
+
+.aboutus_title {
+  font-size: 1rem;
+  font-weight: 800;
+  margin-bottom: 0px !important;
+}
+.aboutus .content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  max-width: 1200px; /* Max width for content */
+  width: 100%;
+  padding: 20px;
+}
+
+.aboutus .imgcontainer {
+  flex: 1;
+  margin-right: 20px;
+  padding: 1em 1em 1em 1em;
+  background-color: transparent;
+  border-style: dashed;
+  border-width: 1px 1px 1px 1px;
+  max-height: 550px;
+  min-width: 500px;
+  border-color: #ffffff2b;
+}
+
+.aboutus .about_img {
+  width: 100%;
+  height: 100%;
+  filter: grayscale(100%);
+  animation: all 0.3s;
+}
+.about_img:hover {
+  filter: grayscale(0%);
+}
+
+.aboutcontent {
+  padding: 3em 1em 3em 5em;
+  flex: 2;
+  color: var(--color-primary); /* Adjusted text color to match the screenshot */
+}
+
+.aboutcontent h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+.aboutcontent p {
+  color: white;
+  margin-bottom: 30px;
+  font-size: 18px;
+  color: var(--color-primary);
+}
+
+.aboutcontent button {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.aboutcontent button:hover {
+  background-color: var(--color-secondary);
+}
+@media (max-width: 940px) {
+  .aboutus {
+    height: auto;
+  }
+  .aboutus .content {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .aboutus .imgcontainer {
+    width: max-content;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 0;
+  }
+  .about_img {
+    height: 400px !important;
+    object-fit: cover;
+  }
+  .aboutcontent {
+    padding: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .about_img {
+    width: 350px !important;
+    height: 350px !important;
+  }
+  .aboutcontent {
+    font-size: 16px !important;
+    max-width: 350px;
+  }
+  .aboutcontent h1 {
+    font-size: 2rem !important;
+  }
+}
+
 /*------------------------ About----------------*/
 
 .aboutPage {
@@ -1060,12 +1229,14 @@
 .aboutSection {
   width: 100%;
   max-width: 1200px;
-  padding: 20px;
-
-  margin: 20px;
+}
+.aboutPage .aboutus{
+  padding: 0px;
+  min-height: none !important;
 }
 
 .aboutHeader {
+  position: relative;
   display: flex;
   background-color: var(--color-primary);
   align-items: center;
@@ -1074,31 +1245,60 @@
   margin-bottom: 20px;
   gap: 40px;
 }
-
+.aboutPage .staticcontent_main {
+  width: 100%;
+  background-color: var(--color-primary);
+}
+.aboutPage .static_div {
+  background-color: var(--color-primary);
+  max-width: 1300px;
+  margin: auto;
+}
+.aboutPage .heading_static {
+  font-size: 2.5rem;
+  color: var(--color-background);
+}
+.aboutPage .static_content {
+  color: var(--color-background);
+  font-size: 1.5rem;
+}
+.aboutPage .static_button:hover {
+  background-color: var(--color-text-primary);
+  color: var(--color-text-secondary);
+}
+.about_overlay{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, black, transparent);
+}
 .aboutHeader h1 {
   font-size: 2.5rem;
+  z-index: 3;
   font-weight: 700;
   color: var(--color-ternary);
 }
 
-.imageContainer {
-  position: relative;
-  width: 400px;
-  height: 270px;
+.aboutPage .imageContainer {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
 }
 
-.content {
+.aboutPage .content {
   padding-bottom: 40px;
   color: black;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.178);
+
 }
 
-.content h1 {
+.aboutPage .content h1 {
   font-size: 1.5rem;
   margin-top: 20px;
 }
 
-.content p {
+.aboutPage .content p {
   font-size: 1rem;
   line-height: 1.6;
   margin-top: 10px;
