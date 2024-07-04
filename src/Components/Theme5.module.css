@@ -1228,7 +1228,7 @@
 
 .aboutSection {
   width: 100%;
-  max-width: 1200px;
+  position: relative;
 }
 .aboutPage .aboutus{
   padding: 0px;
@@ -1237,13 +1237,17 @@
 
 .aboutHeader {
   position: relative;
-  display: flex;
-  background-color: var(--color-primary);
-  align-items: center;
   padding: 80px;
-  justify-content: center;
-  margin-bottom: 20px;
+  justify-content: flex-start;
+  margin-bottom: 0px;
   gap: 40px;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  align-items: flex-start;
+  max-width: 1300px;
 }
 .aboutPage .staticcontent_main {
   width: 100%;
@@ -1270,22 +1274,25 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background: linear-gradient(45deg, black, transparent);
+  /* background: linear-gradient(45deg, black, transparent); */
+  top: 0;
+}
+.aboutPage  .imageContainer{
+  background-color: var(--color-primary);
+  opacity: 0.9;
+}
+.aboutPage  .imageContainer img{
+  position: relative !important;
+  height: 400px !important;
 }
 .aboutHeader h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   z-index: 3;
   font-weight: 700;
-  color: var(--color-ternary);
+  color: var(--color-text-primary);
 }
 
-.aboutPage .imageContainer {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  height: 100%;
-  width: 100%;
-}
+
 
 .aboutPage .content {
   padding-bottom: 40px;
@@ -1317,18 +1324,36 @@
 }
 /* ------------------------Blog---------------- */
 /* styles/Blog.module.css */
-.BlogpageContainer {
+.BlogpageContainer_main{
   background-color: var(--color-background);
-  padding: 20px;
+ 
+}
+.BlogpageContainer {
+  max-width: 1300px;
+  margin: auto;
+ 
 }
 
-.BlogpageContainer .header {
-  text-align: center;
+.BlogpageContainer_main .header {
+  text-align: left;
+  background-color: var(--color-primary);
+  opacity: 0.9;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 300px;
+
   margin-bottom: 40px;
 }
-.BlogpageContainer .header h1 {
-  font-size: 2.5em;
+.BlogpageContainer_main .header h1 {
+  font-size: 3.5em;
+  width: 100%;
+
+  max-width: 1300px;
+  margin: auto;
   font-weight: 700;
+  color: var(--color-text-primary);
 }
 .BlogpageContainer .container {
   display: flex;
@@ -1342,8 +1367,9 @@
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  width: calc(25% - 40px); /* Adjust for gaps */
-  max-width: 300px;
+  width: calc(33% - 40px);
+  /* max-width: 300px; */
+  min-height: 300px;
   margin: 10px;
   cursor: pointer;
   transition: transform 0.2s;
@@ -1364,10 +1390,16 @@
 }
 
 .BlogpageContainer .content1 h2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-weight: 600;
-  font-size: 1.2em;
-  margin: 0 0 10px 0;
-  transition: all 0.3s ease-in-out;
+    font-size: 1.5em;
+    margin: 0 0 10px 0;
+    transition: all 0.3s ease-in-out;
 }
 .BlogpageContainer .content1 h2:hover {
   text-decoration: underline;
@@ -1402,6 +1434,51 @@
     font-size: 0.7em;
   }
   .BlogpageContainer .card {
-    width: 40%; /* 1 card per row */
+    width: 100%; /* 1 card per row */
+    min-height: auto;
+  }
+}
+/* ------------------------Contact Page---------------------- */
+.contactpage_maindiv{
+ background-color: var(--color-background);
+}
+.contactpage_maindiv .header{
+  background-color: var(--color-primary);
+  opacity: 0.9;
+height: 250px;
+ 
+}
+.contactpage_div{
+  max-width: 1300px;
+  margin: auto;
+  
+}
+.contactpage_maindiv .header h3{
+  color: var(--color-text-primary);
+  max-width: 1300px;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  padding: 80px;
+  font-size: 3em;
+}
+.contactpage_div_details{
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1rem;
+  padding: 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+.contactpage_div_details p{
+  display: flex;
+  min-width: 250px;
+  align-items: center;
+  gap: 10px;
+}
+@media (max-width:550px) {
+  .contactpage_div_details {
+   justify-content: center;
+   gap: 10px;
   }
 }

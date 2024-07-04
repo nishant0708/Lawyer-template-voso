@@ -39,7 +39,7 @@ const Navbar = ({ data }) => {
               <p>About</p>
             </Link>
             <p>Service</p>
-            <p>Contact</p>
+            <Link href="/Contact"><p>Contact</p></Link> 
             <Link href="/Blog">
               <p>Blog</p>
             </Link>

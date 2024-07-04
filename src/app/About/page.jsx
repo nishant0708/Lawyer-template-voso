@@ -24,20 +24,17 @@ const Page = () => {
     <div className={styles.aboutPage}>
       {aboutContent.map((content, index) => (
         <section key={index} className={styles.aboutSection}>
-          <div className={styles.aboutHeader}>
+           <div className={styles.imageContainer}>
+             
+               <div className={styles.aboutHeader}>
             <h1>About</h1>
-            <div className={styles.imageContainer}>
-              <Image
-                src="/Assets/bg1.jpeg" // Replace with the path to your dynamic image
-                alt="Team Photo"
-                layout="fill"
-                objectFit="cover"
-              />
-            </div>
-            <div className={styles.about_overlay}></div>
-          </div>
-          <Aboutus/>
             
+           
+          </div>
+            </div>
+         
+          <Aboutus/>
+         
         </section>
        
       ))}
